@@ -18,6 +18,7 @@ plugins=(
   zsh-syntax-highlighting
   mvn
   ubuntu
+  aws
 )
 
 
