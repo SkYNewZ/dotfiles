@@ -129,9 +129,6 @@ alias dip="docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{
 # Show all alias related docker
 dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
 
-# Docker app
-alias datom="docker run --rm -d -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/shm:/dev/shm -v ${HOME}/.atom:/home/atom/.atom -e DISPLAY jamesnetherton/docker-atom-editor"
-
 # output of command to clipboard
 alias to-clipbloard="xclip -selection clipboard"
 
