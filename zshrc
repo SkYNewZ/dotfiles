@@ -19,6 +19,10 @@ plugins=(
   mvn
   ubuntu
   aws
+  terraform
+  golang
+  python
+  virtualenv
 )
 
 
