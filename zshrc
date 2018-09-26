@@ -1,5 +1,7 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:$HOME/bin
+export GOPATH=$HOME/go
+export GOROOT=/usr/lib/go
+export PATH=$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:$HOME/bin:$GOROOT/bin:$GOPATH/bin
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -133,9 +135,12 @@ alias dip="docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{
 # Show all alias related docker
 dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
 
+# Lint Dockerfile
+dlint() { docker run --rm -i hadolint/hadolint < Dockerfile }
+
 # output of command to clipboard
 alias to-clipbloard="xclip -selection clipboard"
 
 DEFAULT_USER=$USER
 
-neofetch;
+# neofetch;

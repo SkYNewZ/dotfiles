@@ -21,7 +21,7 @@
   - ['sudo apt-get install -y neofetch', Installing neofetch]
   - ['sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"', Installing oh-my-zsh]
   - ['sudo apt install -y golang-go', Installing golang]
-  - ['wget -O /tmp/terraform.zip https://releases.hashicorp.com/terraform/0.11.8/terraform_0.11.8_linux_amd64.zip && unzip -d $HOME/bin /tmp/terraform.zip', Installing terraform]
+  - ['wget -O /tmp/terraform.zip https://releases.hashicorp.com/terraform/0.11.8/terraform_0.11.8_linux_amd64.zip && sudo unzip -d /usr/bin /tmp/terraform.zip', Installing terraform]
 
 - link:
     ~/.zshrc: zshrc
