@@ -19,6 +19,7 @@
   - ['sudo apt install -y materia-gtk-theme', Install materia-gtk-theme]
   - ['sudo apt install -y zsh', Installing zsh]
   - ['sudo apt install -y neofetch', Installing neofetch]
+  - ['sudo apt install -y httpie', 'Installing httpie : https://github.com/jakubroztocil/httpie#linux']
   - ['sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"', Installing oh-my-zsh]
   - ['sudo apt install -y golang-go', Installing golang]
   - ['wget -O /tmp/terraform.zip https://releases.hashicorp.com/terraform/0.11.8/terraform_0.11.8_linux_amd64.zip && sudo unzip -d /usr/bin /tmp/terraform.zip', Installing terraform]
