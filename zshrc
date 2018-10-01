@@ -2,6 +2,7 @@
 export GOPATH=$HOME/go
 export GOROOT=/usr/lib/go
 export PATH=$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:$HOME/bin:$GOROOT/bin:$GOPATH/bin
+DEFAULT_USER=$USER
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -141,6 +142,18 @@ dlint() { docker run --rm -i hadolint/hadolint < Dockerfile }
 # output of command to clipboard
 alias to-clipbloard="xclip -selection clipboard"
 
-DEFAULT_USER=$USER
-
-# neofetch;
+# composer
+# https://hub.docker.com/_/composer/
+composer () {
+    tty=
+    tty -s && tty=--tty
+    docker run \
+        $tty \
+        --interactive \
+        --rm \
+        --user $(id -u):$(id -g) \
+        --volume /etc/passwd:/etc/passwd:ro \
+        --volume /etc/group:/etc/group:ro \
+        --volume $(pwd):/app \
+        composer "$@"
+}
