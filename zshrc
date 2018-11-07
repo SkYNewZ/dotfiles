@@ -157,3 +157,6 @@ composer () {
         --volume $(pwd):/app \
         composer "$@"
 }
+
+# Added by Krypton
+export GPG_TTY=$(tty)
